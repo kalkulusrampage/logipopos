@@ -6,7 +6,7 @@ Wants=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=${CMAKE_INSTALL_PREFIX}/bin/logid --config $ENV{HOME}/.logid.cfg
+ExecStart=${CMAKE_INSTALL_PREFIX}/bin/logid --config $ENV{HOME}/.config/logipopos/logid.cfg
 User=root
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure

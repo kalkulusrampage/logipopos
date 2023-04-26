@@ -12,20 +12,13 @@ cmake ..; wait
 make; wait
 sudo make install; wait
 
+# delete volume change annoying sound
+sudo mv -v /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga.bak
+sudo mv -v /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga.bak
+
 # doing configuration file
 mkdir -p ~/.config/logipopos
 cp -v ../logid.example.cfg ~/.config/logipopos/logid.cfg
 
 # enable/start daemon
 sudo systemctl enable --now logid
-
-# delete volume change annoying sound
-mv /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga \
-   /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga.bak
-
-mv /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga \
-   /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga.bak
-
-
-
-

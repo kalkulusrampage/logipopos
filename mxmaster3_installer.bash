@@ -12,7 +12,8 @@ make; wait
 sudo make install; wait
 
 # doing configuration file
-# cp -v ../.logid.cfg ~/.logid.cfg
+mkdir -p ~/.config/logipopos
+cp -v ../logid.example.cfg ~/.config/logipopos/logid.cfg
 
 # enable/start daemon
 sudo systemctl enable --now logid
@@ -23,9 +24,6 @@ mv /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga \
 
 mv /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga \
    /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga.bak
-
-
-
 
 
 

@@ -1,6 +1,7 @@
 #! /usr/bin/bash
 
-
+git clone https://github.com/kalkulusrampage/logipopos.git; wait
+cd logipopos
 
 # build logid
 sudo apt update; wait

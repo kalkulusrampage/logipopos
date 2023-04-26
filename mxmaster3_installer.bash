@@ -12,17 +12,17 @@ make; wait
 sudo make install; wait
 
 # doing configuration file
-cp -v ../.logid.cfg ~/.logid.cfg
+# cp -v ../.logid.cfg ~/.logid.cfg
 
 # enable/start daemon
 sudo systemctl enable --now logid
 
 # delete volume change annoying sound
-#mv /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga \
-#     /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga.bak
-#
-#mv /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga \
-#     /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga.bak
+mv /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga \
+   /usr/share/sounds/Pop/stereo/action/audio-volume-change.oga.bak
+
+mv /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga \
+   /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga.bak
 
 
 
